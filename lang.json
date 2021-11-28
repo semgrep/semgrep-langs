@@ -118,7 +118,7 @@
     "exts": [".ml", ".mli"],
     "example_ext": ".ml",
     "maturity": "alpha",
-    "shebangs": []
+    "shebangs": ["ocaml", "ocamlscript"]
   },
   {
     "id": "php",
