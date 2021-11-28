@@ -10,6 +10,8 @@ keys: All possible values that can reference this language when used as an
   mapping to languages
 exts: File extensions that Semgrep will scan for this language; should be
   non-empty
+excluded_exts: File extensions that Semgrep will skip even if one of exts is a
+  suffix
 example_ext: This language's example file's extension; should be specified if
   length of exts is greater than one
 reverse_exts: If present, overrides exts when determining _what_ language a
