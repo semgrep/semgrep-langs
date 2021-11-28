@@ -6,7 +6,7 @@
     "exts": [".bash", ".sh"],
     "example_ext": ".sh",
     "maturity": "alpha",
-    "shebangs": ["bash"]
+    "shebangs": ["bash", "sh"]
   },
   {
     "id": "c",
