@@ -18,4 +18,6 @@ reverse_exts: If present, overrides exts when determining _what_ language a
 maturity: One of "ga", "beta", "alpha", or "develop"; "develop" is hidden in
   the UI
 shebangs: Programs that execute scripts written in this language; may be empty
+tags: An arbitrary list of string tags; these are useful to replace
+  a hard-coded switch on languages in a program
 ```

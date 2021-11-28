@@ -83,7 +83,8 @@
     "exts": [".js", ".jsx"],
     "example_ext": ".jsx",
     "maturity": "ga",
-    "shebangs": ["node", "js", "nodejs"]
+    "shebangs": ["node", "js", "nodejs"],
+    "tags": ["is_js"]
   },
   {
     "id": "json",
@@ -135,7 +136,8 @@
     "reverse_exts": [],
     "example_ext": ".py",
     "maturity": "develop",
-    "shebangs": ["python", "python2"]
+    "shebangs": ["python", "python2"],
+    "tags": ["is_python"]
   },
   {
     "id": "python3",
@@ -145,7 +147,8 @@
     "reverse_exts": [],
     "example_ext": ".py",
     "maturity": "develop",
-    "shebangs": ["python", "python3"]
+    "shebangs": ["python", "python3"],
+    "tags": ["is_python"]
   },
   {
     "id": "python",
@@ -154,7 +157,8 @@
     "exts": [".py", ".pyi"],
     "example_ext": ".py",
     "maturity": "ga",
-    "shebangs": ["python", "python2", "python3"]
+    "shebangs": ["python", "python2", "python3"],
+    "tags": ["is_python"]
   },
   {
     "id": "r",
@@ -211,7 +215,8 @@
     "exts": [".ts", ".tsx"],
     "example_ext": ".tsx",
     "maturity": "ga",
-    "shebangs": ["ts-node"]
+    "shebangs": ["ts-node"],
+    "tags": ["is_js"]
   },
   {
     "id": "vue",
