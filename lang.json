@@ -198,7 +198,7 @@
     "name": "Scala",
     "keys": ["scala"],
     "exts": [".scala"],
-    "maturity": "alpha",
+    "maturity": "beta",
     "shebangs": ["scala"]
   },
   {
