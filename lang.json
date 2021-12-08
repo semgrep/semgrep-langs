@@ -202,6 +202,14 @@
     "shebangs": ["scala"]
   },
   {
+    "id": "solidity",
+    "name": "Solidity",
+    "keys": ["solidity", "sol"],
+    "exts": [".sol"],
+    "maturity": "alpha",
+    "shebangs": []
+  },
+  {
     "id": "hcl",
     "name": "Terraform",
     "keys": ["tf", "hcl", "terraform"],
