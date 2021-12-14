@@ -34,6 +34,14 @@
     "shebangs": []
   },
   {
+    "id": "dockerfile",
+    "name": "Dockerfile",
+    "keys": ["dockerfile"],
+    "exts": ["Dockerfile", ".dockerfile"],
+    "maturity": "alpha",
+    "shebangs": []
+  },
+  {
     "id": "generic",
     "name": "Generic",
     "keys": ["generic"],
