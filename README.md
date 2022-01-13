@@ -17,8 +17,8 @@ example_ext: This language's example file's extension; should be specified if
 reverse_exts: If present, overrides exts when determining _what_ language a
   file is, otherwise defaults to exts; reverse_exts must be a one-to-one
   mapping to languages
-maturity: One of "ga", "beta", "alpha", or "develop"; "develop" is hidden in
-  the UI
+maturity: One of "ga", "beta", "alpha", or "develop"; "alpha" displays as "Experimental"
+  in documentation; "develop" is hidden altogether
 shebangs: Programs that execute scripts written in this language; may be empty
 tags: An arbitrary list of string tags; these are useful to replace
   a hard-coded switch on languages in a program
