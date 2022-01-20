@@ -38,7 +38,7 @@
     "name": "Dockerfile",
     "keys": ["dockerfile", "docker"],
     "exts": ["Dockerfile", ".dockerfile"],
-    "maturity": "develop",
+    "maturity": "alpha",
     "shebangs": []
   },
   {
