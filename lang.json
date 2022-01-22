@@ -3,7 +3,8 @@
     "id": "bash",
     "name": "Bash",
     "keys": ["bash", "sh"],
-    "exts": [".bash", ".sh"],
+    "reverse_exts": [".bash"],
+    "exts": [".sh"],
     "example_ext": ".sh",
     "maturity": "alpha",
     "shebangs": ["bash", "sh"]
@@ -12,34 +13,34 @@
     "id": "c",
     "name": "C",
     "keys": ["c"],
-    "exts": [".c"],
-    "maturity": "alpha",
-    "shebangs": []
+    "reverse_exts": [".c"],
+    "example_ext": ".sh",
+    "maturity": "alpha"
   },
   {
     "id": "cpp",
     "name": "C++",
     "keys": ["cpp", "c++"],
-    "exts": [".cc", ".cpp"],
+    "reverse_exts": [".cc", ".cpp"],
     "example_ext": ".cpp",
-    "maturity": "alpha",
-    "shebangs": []
+    "maturity": "alpha"
   },
   {
     "id": "csharp",
     "name": "C#",
     "keys": ["csharp", "c#"],
-    "exts": [".cs"],
-    "maturity": "ga",
-    "shebangs": []
+    "reverse_exts": [".cs"],
+    "example_ext": ".cs",
+    "maturity": "ga"
   },
   {
     "id": "dockerfile",
     "name": "Dockerfile",
     "keys": ["dockerfile", "docker"],
-    "exts": ["Dockerfile", ".dockerfile"],
-    "maturity": "alpha",
-    "shebangs": []
+    "reverse_exts": [".dockerfile"],
+    "example_ext": ".dockerfile",
+    "reverse_filenames": ["Dockerfile"],
+    "maturity": "alpha"
   },
   {
     "id": "generic",
@@ -47,22 +48,22 @@
     "keys": ["generic"],
     "exts": [""],
     "example_ext": ".generic",
-    "maturity": "alpha",
-    "shebangs": []
+    "maturity": "alpha"
   },
   {
     "id": "go",
     "name": "Go",
     "keys": ["go", "golang"],
-    "exts": [".go"],
-    "maturity": "ga",
-    "shebangs": []
+    "reverse_exts": [".go"],
+    "example_ext": ".go",
+    "maturity": "ga"
   },
   {
     "id": "hack",
     "name": "Hack",
     "keys": ["hack"],
-    "exts": [".hack", ".hck", ".hh"],
+    "reverse_exts": [".hack", ".hck"],
+    "exts": [".hh"],
     "example_ext": ".hack",
     "maturity": "develop",
     "shebangs": ["hhvm"]
@@ -71,8 +72,11 @@
     "id": "html",
     "name": "HTML",
     "keys": ["html"],
-    "exts": [".htm", ".html"],
+    "reverse_exts": [".htm", ".html"],
+    "exts": [],
     "example_ext": ".html",
+    "reverse_filenames": [],
+    "filenames": [],
     "maturity": "alpha",
     "shebangs": []
   },
@@ -80,15 +84,14 @@
     "id": "java",
     "name": "Java",
     "keys": ["java"],
-    "exts": [".java"],
-    "maturity": "ga",
-    "shebangs": []
+    "reverse_exts": [".java"],
+    "maturity": "ga"
   },
   {
     "id": "js",
     "name": "JavaScript",
     "keys": ["js", "javascript"],
-    "exts": [".js", ".jsx"],
+    "reverse_exts": [".js", ".jsx"],
     "excluded_exts": [".min.js"],
     "example_ext": ".jsx",
     "maturity": "ga",
@@ -99,24 +102,22 @@
     "id": "json",
     "name": "JSON",
     "keys": ["json"],
-    "exts": [".json"],
-    "maturity": "ga",
-    "shebangs": []
+    "reverse_exts": [".json"],
+    "maturity": "ga"
   },
   {
     "id": "kotlin",
     "name": "Kotlin",
     "keys": ["kt", "kotlin"],
-    "exts": [".kt", ".kts", ".ktm"],
+    "reverse_exts": [".kt", ".kts", ".ktm"],
     "example_ext": ".kt",
-    "maturity": "beta",
-    "shebangs": []
+    "maturity": "beta"
   },
   {
     "id": "lua",
     "name": "Lua",
     "keys": ["lua"],
-    "exts": [".lua"],
+    "reverse_exts": [".lua"],
     "maturity": "alpha",
     "shebangs": ["lua"]
   },
@@ -124,7 +125,7 @@
     "id": "ocaml",
     "name": "OCaml",
     "keys": ["ocaml"],
-    "exts": [".ml", ".mli"],
+    "reverse_exts": [".ml", ".mli"],
     "example_ext": ".ml",
     "maturity": "alpha",
     "shebangs": ["ocaml", "ocamlscript"]
@@ -133,7 +134,7 @@
     "id": "php",
     "name": "PHP",
     "keys": ["php"],
-    "exts": [".php"],
+    "reverse_exts": [".php"],
     "maturity": "alpha",
     "shebangs": ["php"]
   },
@@ -141,8 +142,7 @@
     "id": "python2",
     "name": "Python 2",
     "keys": ["python2"],
-    "exts": [".py", ".pyi"],
-    "reverse_exts": [],
+    "reverse_exts": [".py", ".pyi"],
     "example_ext": ".py",
     "maturity": "develop",
     "shebangs": ["python", "python2"],
@@ -152,8 +152,7 @@
     "id": "python3",
     "name": "Python 3",
     "keys": ["python3"],
-    "exts": [".py", ".pyi"],
-    "reverse_exts": [],
+    "reverse_exts": [".py", ".pyi"],
     "example_ext": ".py",
     "maturity": "develop",
     "shebangs": ["python", "python3"],
@@ -163,7 +162,7 @@
     "id": "python",
     "name": "Python",
     "keys": ["py", "python"],
-    "exts": [".py", ".pyi"],
+    "reverse_exts": [".py", ".pyi"],
     "example_ext": ".py",
     "maturity": "ga",
     "shebangs": ["python", "python2", "python3"],
@@ -173,7 +172,7 @@
     "id": "r",
     "name": "R",
     "keys": ["r"],
-    "exts": [".r", ".R"],
+    "reverse_exts": [".r", ".R"],
     "example_ext": ".R",
     "maturity": "develop"
   },
@@ -182,14 +181,13 @@
     "name": "regex",
     "keys": ["regex", "none"],
     "exts": [""],
-    "reverse_exts": [],
     "maturity": "develop"
   },
   {
     "id": "ruby",
     "name": "Ruby",
     "keys": ["ruby"],
-    "exts": [".rb"],
+    "reverse_exts": [".rb"],
     "maturity": "ga",
     "shebangs": ["ruby"]
   },
@@ -197,7 +195,7 @@
     "id": "rust",
     "name": "Rust",
     "keys": ["rust"],
-    "exts": [".rs"],
+    "reverse_exts": [".rs"],
     "maturity": "alpha",
     "shebangs": ["run-cargo-script"]
   },
@@ -205,7 +203,7 @@
     "id": "scala",
     "name": "Scala",
     "keys": ["scala"],
-    "exts": [".scala"],
+    "reverse_exts": [".scala"],
     "maturity": "beta",
     "shebangs": ["scala"]
   },
@@ -214,22 +212,20 @@
     "name": "Solidity",
     "keys": ["solidity", "sol"],
     "exts": [".sol"],
-    "maturity": "alpha",
-    "shebangs": []
+    "maturity": "alpha"
   },
   {
     "id": "hcl",
     "name": "Terraform",
     "keys": ["tf", "hcl", "terraform"],
-    "exts": [".tf"],
-    "maturity": "beta",
-    "shebangs": []
+    "reverse_exts": [".tf"],
+    "maturity": "beta"
   },
   {
     "id": "ts",
     "name": "TypeScript",
     "keys": ["ts", "typescript"],
-    "exts": [".ts", ".tsx"],
+    "reverse_exts": [".ts", ".tsx"],
     "excluded_exts": [".d.ts"],
     "example_ext": ".tsx",
     "maturity": "ga",
@@ -240,17 +236,15 @@
     "id": "vue",
     "name": "Vue",
     "keys": ["vue"],
-    "exts": [".vue"],
-    "maturity": "develop",
-    "shebangs": []
+    "reverse_exts": [".vue"],
+    "maturity": "develop"
   },
   {
     "id": "yaml",
     "name": "YAML",
     "keys": ["yaml"],
-    "exts": [".yml", ".yaml"],
+    "reverse_exts": [".yml", ".yaml"],
     "example_ext": ".yaml",
-    "maturity": "alpha",
-    "shebangs": []
+    "maturity": "alpha"
   }
 ]
