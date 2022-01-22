@@ -11,13 +11,12 @@ type language = {
   (* Unique language identifier of the form [a-z][a-z0-9]+ *)
   id: string;
 
-  (* Human-readable language name *)
+  (* Human-readable language name e.g. 'C++' or 'Fortran 90' *)
   name: string;
 
   (* Values that identify this language uniquely in addition
      to the 'id' field. This list may be empty since the language 'id'
-     is an implicit member. Members must be of the form [a-z][a-z0-9]+
-     like the main 'id'.
+     is an implicit member. Members don't have to be of a particular form.
 
      For example, these language keys are those used by the --lang option of
      the 'semgrep' command. *)
@@ -31,20 +30,28 @@ type language = {
 
      An extension must start with a period and continue with a nonempty
      sequence of graphical ASCII characters i.e. it must match the pattern
-     \.[[:graph:]]+ *)
+     \.[[:graph:]]+
+
+     The same logic applies to field names containing 'filename' instead
+     of 'ext'. A file name is an exact name for a file rather than just
+     a suffix. Examples include 'Makefile' and 'package.json'.
+  *)
   ~reverse_exts: string list;
+  ~reverse_filenames: string list;
 
   (* Additional file extensions that Semgrep will scan for this language.
      It extends the value of 'reverse_exts'. Extensions listed here may not be
      exclusive to this language. *)
   ~exts: string list;
+  ~filenames: string list;
 
   (* File extensions that Semgrep will skip even if one of them is a suffix. *)
   ~excluded_exts: string list;
+  ~excluded_filenames: string list;
 
   (* This language's example file's extension.
      It defaults to the first extension found in 'reverse_exts' or 'exts'.
-     If no valid extension is known from 'reverse_exts' and 'exts, a
+     If no valid extension is known from 'reverse_exts' or 'exts, a
      nonempty extension must be provided here. *)
   ?example_ext: string option;
 
@@ -54,9 +61,8 @@ type language = {
   ~shebangs: string list;
 
   (* An arbitrary list of string tags; these are useful to replace a
-     hard-coded switch on languages in a program tags.
-     TODO: this field is unused. Remove it? *)
-  (*tags: string list;*)
+     hard-coded switch on languages in a program tags. *)
+  ~tags: string list;
 }
 
 (*
