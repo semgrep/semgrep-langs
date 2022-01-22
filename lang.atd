@@ -1,0 +1,72 @@
+(*
+   Type definition for the list of languages supported by Semgrep.
+
+   semgrep: https://github.com/returntocorp/semgrep
+   atd: https://atd.readthedocs.io/en/latest/
+*)
+
+type languages = language list
+
+type language = {
+  (* Unique language identifier of the form [a-z][a-z0-9]+ *)
+  id: string;
+
+  (* Human-readable language name *)
+  name: string;
+
+  (* Values that identify this language uniquely in addition
+     to the 'id' field. This list may be empty since the language 'id'
+     is an implicit member. Members must be of the form [a-z][a-z0-9]+
+     like the main 'id'.
+
+     For example, these language keys are those used by the --lang option of
+     the 'semgrep' command. *)
+  ~keys: string list;
+
+  (* Extensions that are exclusive to this language.
+     Semgrep can use them to uniquely assign a language to a file.
+     For example, if '.c' is listed here, a file ending in '.c'
+     will be assumed to be in this language and no other. No two languages
+     may have overlapping 'reverse_exts'.
+
+     An extension must start with a period and continue with a nonempty
+     sequence of graphical ASCII characters i.e. it must match the pattern
+     \.[[:graph:]]+ *)
+  ~reverse_exts: string list;
+
+  (* Additional file extensions that Semgrep will scan for this language.
+     It extends the value of 'reverse_exts'. Extensions listed here may not be
+     exclusive to this language. *)
+  ~exts: string list;
+
+  (* File extensions that Semgrep will skip even if one of them is a suffix. *)
+  ~excluded_exts: string list;
+
+  (* This language's example file's extension.
+     It defaults to the first extension found in 'reverse_exts' or 'exts'.
+     If no valid extension is known from 'reverse_exts' and 'exts, a
+     nonempty extension must be provided here. *)
+  ?example_ext: string option;
+
+  maturity: maturity;
+
+  (* Programs that execute scripts written in this language; may be empty. *)
+  ~shebangs: string list;
+
+  (* An arbitrary list of string tags; these are useful to replace a
+     hard-coded switch on languages in a program tags.
+     TODO: this field is unused. Remove it? *)
+  (*tags: string list;*)
+}
+
+(*
+   Maturity of the support for the language in Semgrep.
+   'Alpha' displays as "Experimental" in documentation.
+   'Develop' is hidden altogether.
+*)
+type maturity = [
+  | GA <json name="ga">
+  | Beta <json name="beta">
+  | Alpha <json name="alpha">
+  | Develop <json name="develop">
+]
