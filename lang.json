@@ -37,7 +37,8 @@
     "id": "dockerfile",
     "name": "Dockerfile",
     "keys": ["dockerfile", "docker"],
-    "exts": ["Dockerfile", ".dockerfile"],
+    "exts": [".dockerfile", ".Dockerfile"],
+    "example_ext": ".dockerfile",
     "maturity": "alpha",
     "shebangs": []
   },
