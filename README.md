@@ -13,7 +13,7 @@ JSON schema is:
   <dt>excluded_exts</dt><dd>File extensions that Semgrep will skip even if one of exts is a
     suffix</dd>
   <dt>example_ext</dt><dd>This language's example file's extension; should be specified if
-    length of exts is greater than one</dd>
+    length of exts is greater than one. Must start with a period.</dd>
   <dt>reverse_exts</dt><dd>If present, overrides exts when determining _what_ language a
     file is, otherwise defaults to exts; reverse_exts must be a one-to-one
     mapping to languages</dd>
