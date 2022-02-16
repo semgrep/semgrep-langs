@@ -43,6 +43,14 @@
     "shebangs": []
   },
   {
+    "id": "elixir",
+    "name": "Elixir",
+    "keys": ["ex", "elixir"],
+      "exts": [".ex", ".exs"],
+    "maturity": "develop",
+    "shebangs": []
+  },
+  {
     "id": "generic",
     "name": "Generic",
     "keys": ["generic"],
