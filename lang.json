@@ -142,7 +142,7 @@
     "id": "php",
     "name": "PHP",
     "keys": ["php"],
-    "exts": [".php"],
+    "exts": [".php", ".tpl"],
     "maturity": "alpha",
     "shebangs": ["php"]
   },
