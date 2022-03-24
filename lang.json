@@ -227,6 +227,14 @@
     "shebangs": []
   },
   {
+    "id": "swift",
+    "name": "Swift",
+    "keys": ["swift"],
+    "exts": [".swift"],
+    "maturity": "develop",
+    "shebangs": []
+  },
+  {
     "id": "hcl",
     "name": "Terraform",
     "keys": ["tf", "hcl", "terraform"],
