@@ -238,7 +238,7 @@
     "id": "hcl",
     "name": "Terraform",
     "keys": ["tf", "hcl", "terraform"],
-    "exts": [".tf"],
+    "exts": [".tf", ".hcl"],
     "maturity": "beta",
     "shebangs": []
   },
