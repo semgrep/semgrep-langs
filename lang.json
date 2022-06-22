@@ -143,7 +143,7 @@
     "name": "PHP",
     "keys": ["php"],
     "exts": [".php", ".tpl"],
-    "maturity": "alpha",
+    "maturity": "ga",
     "shebangs": ["php"]
   },
   {
@@ -184,7 +184,7 @@
     "keys": ["r"],
     "exts": [".r", ".R"],
     "example_ext": ".R",
-    "maturity": "develop"
+    "maturity": "alpha"
   },
   {
     "id": "regex",
