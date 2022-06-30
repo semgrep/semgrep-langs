@@ -113,6 +113,14 @@
     "shebangs": []
   },
   {
+    "id": "julia",
+    "name": "julia",
+    "keys": ["julia"],
+    "exts": [".jl"],
+    "maturity": "alpha",
+    "shebangs": []
+  },
+  {
     "id": "kotlin",
     "name": "Kotlin",
     "keys": ["kt", "kotlin"],
