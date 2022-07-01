@@ -117,7 +117,7 @@
     "name": "julia",
     "keys": ["julia"],
     "exts": [".jl"],
-    "maturity": "alpha",
+    "maturity": "develop",
     "shebangs": []
   },
   {
