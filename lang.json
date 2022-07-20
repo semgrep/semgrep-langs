@@ -34,6 +34,14 @@
     "shebangs": []
   },
   {
+    "id": "dart",
+    "name": "Dart",
+    "keys": ["dart"],
+    "exts": [".dart"],
+    "maturity": "develop",
+    "shebangs": []
+  },
+  {
     "id": "dockerfile",
     "name": "Dockerfile",
     "keys": ["dockerfile", "docker"],
@@ -46,7 +54,7 @@
     "id": "elixir",
     "name": "Elixir",
     "keys": ["ex", "elixir"],
-      "exts": [".ex", ".exs"],
+    "exts": [".ex", ".exs"],
     "maturity": "develop",
     "shebangs": []
   },
