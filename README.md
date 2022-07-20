@@ -1,4 +1,4 @@
-Order of elements in `lang.json` is order they are displayed on editor.
+The elements in `lang.json` are ordered alphabetically.
 
 JSON schema is:
 
