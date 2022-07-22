@@ -3,8 +3,8 @@ The elements in `lang.json` are ordered alphabetically.
 JSON schema is:
 
 <dl>
-  <dt>id</dt><dd>Unique string identifier</dd>
-  <dt>name</dt><dd>Human-readable name</dd>
+  <dt>id</dt><dd>Unique string identifier.</dd>
+  <dt>name</dt><dd>Human-readable name.</dd>
   <dt>keys</dt><dd>All possible values that can reference a language when used as an
     argument to `--lang`; should be non-empty; keys must map one-to-one
     to languages.</dd>
