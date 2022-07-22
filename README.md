@@ -8,7 +8,7 @@ JSON schema is:
   <dt>keys</dt><dd>All possible values that can reference a language when used as an
     argument to `--lang`; should be non-empty; keys must map one-to-one
     to languages.</dd>
-  <dt>exts</dt><dd>File extensions that Semgrep scans as this language; should be
+  <dt>exts</dt><dd>File extensions that Semgrep scans for this language; should be
     non-empty.</dd>
   <dt>excluded_exts</dt><dd>File extensions that Semgrep skips even if one of exts is a
     suffix.</dd>
