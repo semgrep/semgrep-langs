@@ -12,8 +12,9 @@ JSON schema is:
   language; should be non-empty.</dd>
   <dt>excluded_exts</dt><dd>File extensions that Semgrep skips even if one of exts is a
     suffix.</dd>
-  <dt>example_ext</dt><dd>File extension of the example language. Specify if
-    length of exts is greater than one. Must start with a period.</dd>
+  <dt>example_ext</dt><dd>Specify example_ext if the language has more than one exts.
+    Must represent the most idiomatic extension of the example language.
+    Must start with a period.</dd>
   <dt>reverse_exts</dt><dd>If present, overrides exts when determining <i>what</i> language a
     file is, otherwise defaults to exts; reverse_exts must be a one-to-one
     mapping to languages.</dd>
