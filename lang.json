@@ -247,7 +247,7 @@
     "name": "Swift",
     "keys": ["swift"],
     "exts": [".swift"],
-    "maturity": "develop",
+    "maturity": "alpha",
     "shebangs": []
   },
   {
