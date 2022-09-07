@@ -121,6 +121,14 @@
     "shebangs": []
   },
   {
+    "id": "jsonnet",
+    "name": "Jsonnet",
+    "keys": ["jsonnet"],
+    "exts": [".jsonnet", ".libsonnet"],
+    "maturity": "develop",
+    "shebangs": []
+  },
+  {
     "id": "julia",
     "name": "Julia",
     "keys": ["julia"],
