@@ -1,5 +1,13 @@
 [
   {
+    "id": "apex",
+    "name": "Apex",
+    "keys": ["apex"],
+    "exts": [".cls"],
+    "maturity": "develop",
+    "shebangs": []
+  },
+  {
     "id": "bash",
     "name": "Bash",
     "keys": ["bash", "sh"],
