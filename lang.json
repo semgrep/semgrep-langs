@@ -25,6 +25,14 @@
     "shebangs": []
   },
   {
+    "id": "clojure",
+    "name": "Clojure",
+    "keys": ["clojure"],
+    "exts": [".clj", ".cljs", ".cljc", ".edn" ],
+    "maturity": "develop",
+    "shebangs": []
+  },
+  {
     "id": "cpp",
     "name": "C++",
     "keys": ["cpp", "c++"],
@@ -154,6 +162,14 @@
     "shebangs": []
   },
   {
+    "id": "lisp",
+    "name": "Lisp",
+    "keys": ["lisp"],
+      "exts": [".lisp", ".cl", ".el"],
+    "maturity": "develop",
+    "shebangs": []
+  },
+  {
     "id": "lua",
     "name": "Lua",
     "keys": ["lua"],
@@ -249,6 +265,14 @@
     "exts": [".scala"],
     "maturity": "ga",
     "shebangs": ["scala"]
+  },
+  {
+    "id": "scheme",
+    "name": "Scheme",
+    "keys": ["scheme"],
+    "exts": [".scm", ".ss"],
+    "maturity": "develop",
+    "shebangs": []
   },
   {
     "id": "solidity",
