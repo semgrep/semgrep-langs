@@ -132,7 +132,7 @@
     "id": "json",
     "name": "JSON",
     "keys": ["json"],
-    "exts": [".json"],
+    "exts": [".json", ".ipynb"],
     "maturity": "ga",
     "shebangs": []
   },
