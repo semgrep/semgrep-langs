@@ -141,7 +141,7 @@
     "name": "Jsonnet",
     "keys": ["jsonnet"],
     "exts": [".jsonnet", ".libsonnet"],
-    "maturity": "develop",
+    "maturity": "alpha",
     "shebangs": []
   },
   {
@@ -315,6 +315,15 @@
     "keys": ["vue"],
     "exts": [".vue"],
     "maturity": "develop",
+    "shebangs": []
+  },
+  {
+    "id": "xml",
+    "name": "XML",
+    "keys": ["xml"],
+    "exts": [".xml"],
+    "example_ext": ".xml",
+    "maturity": "alpha",
     "shebangs": []
   },
   {
