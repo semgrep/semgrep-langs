@@ -5,7 +5,8 @@
     "keys": ["apex"],
     "exts": [".cls"],
     "maturity": "develop",
-    "shebangs": []
+    "shebangs": [],
+    "tags": ["is_proprietary"]
   },
   {
     "id": "bash",
