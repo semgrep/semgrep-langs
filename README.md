@@ -21,4 +21,7 @@ language; should be non-empty.
   in documentation; "develop" is not displayed in documentation.
 * **shebangs**: Programs that execute scripts written in this language. May be empty.
 * **tags**: An arbitrary list of string tags; useful to replace
-  a hard-coded switch on languages in a program.
+  a hard-coded switch on languages in a program. Current tags include:
+  -  `is_proprietary` - for proprietary languages like Apex
+  - `is_js` - for Javascript and Typescript
+  - `is_python` - for Python, Python2, Python3
