@@ -292,7 +292,7 @@
     "shebangs": []
   },
   {
-    "id": "hcl",
+    "id": "terraform",
     "name": "Terraform",
     "keys": ["tf", "hcl", "terraform"],
     "exts": [".tf", ".hcl"],
