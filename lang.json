@@ -30,7 +30,7 @@
     "name": "Clojure",
     "keys": ["clojure"],
     "exts": [".clj", ".cljs", ".cljc", ".edn" ],
-    "maturity": "develop",
+    "maturity": "alpha",
     "shebangs": []
   },
   {
@@ -167,7 +167,7 @@
     "name": "Lisp",
     "keys": ["lisp"],
       "exts": [".lisp", ".cl", ".el"],
-    "maturity": "develop",
+    "maturity": "alpha",
     "shebangs": []
   },
   {
@@ -272,7 +272,7 @@
     "name": "Scheme",
     "keys": ["scheme"],
     "exts": [".scm", ".ss"],
-    "maturity": "develop",
+    "maturity": "alpha",
     "shebangs": []
   },
   {
