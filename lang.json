@@ -54,7 +54,7 @@
     "name": "Dart",
     "keys": ["dart"],
     "exts": [".dart"],
-    "maturity": "alpha",
+    "maturity": "develop",
     "shebangs": []
   },
   {
