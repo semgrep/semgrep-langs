@@ -26,6 +26,14 @@
     "shebangs": []
   },
   {
+    "id": "cairo",
+    "name": "Cairo",
+    "keys": ["cairo"],
+    "exts": [".cairo"],
+    "maturity": "develop",
+    "shebangs": []
+  },
+  {
     "id": "clojure",
     "name": "Clojure",
     "keys": ["clojure"],
