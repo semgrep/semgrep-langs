@@ -562,6 +562,7 @@ type maturity =
 *)
 type info = {
   id: t;
+  id_string: string;
   name: string;
   keys: string list;
   exts: string list;
@@ -624,6 +625,7 @@ let list = [
                 out.write("*)\n")
             out.write(f"""{{
   id = {x.id_.capitalize()};
+  id_string = "{x.id_}";
   name = "{x.name}";
   keys = {ocaml_string_list(x.keys)};
   exts = {ocaml_string_list(x.exts)};

@@ -58,6 +58,7 @@ type maturity =
 *)
 type info = {
   id: t;
+  id_string: string;
   name: string;
   keys: string list;
   exts: string list;
@@ -72,6 +73,7 @@ type info = {
 let list = [
 {
   id = Apex;
+  id_string = "apex";
   name = "Apex";
   keys = [{|apex|}];
   exts = [{|.cls|}];
@@ -84,6 +86,7 @@ let list = [
 };
 {
   id = Bash;
+  id_string = "bash";
   name = "Bash";
   keys = [{|bash|}; {|sh|}];
   exts = [{|.bash|}; {|.sh|}];
@@ -96,6 +99,7 @@ let list = [
 };
 {
   id = C;
+  id_string = "c";
   name = "C";
   keys = [{|c|}];
   exts = [{|.c|}];
@@ -108,6 +112,7 @@ let list = [
 };
 {
   id = Cairo;
+  id_string = "cairo";
   name = "Cairo";
   keys = [{|cairo|}];
   exts = [{|.cairo|}];
@@ -120,6 +125,7 @@ let list = [
 };
 {
   id = Clojure;
+  id_string = "clojure";
   name = "Clojure";
   keys = [{|clojure|}];
   exts = [{|.clj|}; {|.cljs|}; {|.cljc|}; {|.edn|}];
@@ -132,6 +138,7 @@ let list = [
 };
 {
   id = Cpp;
+  id_string = "cpp";
   name = "C++";
   keys = [{|cpp|}; {|c++|}];
   exts = [{|.cc|}; {|.cpp|}];
@@ -144,6 +151,7 @@ let list = [
 };
 {
   id = Csharp;
+  id_string = "csharp";
   name = "C#";
   keys = [{|csharp|}; {|c#|}];
   exts = [{|.cs|}];
@@ -156,6 +164,7 @@ let list = [
 };
 {
   id = Dart;
+  id_string = "dart";
   name = "Dart";
   keys = [{|dart|}];
   exts = [{|.dart|}];
@@ -168,6 +177,7 @@ let list = [
 };
 {
   id = Dockerfile;
+  id_string = "dockerfile";
   name = "Dockerfile";
   keys = [{|dockerfile|}; {|docker|}];
   exts = [{|.dockerfile|}; {|.Dockerfile|}; {|Dockerfile|}];
@@ -180,6 +190,7 @@ let list = [
 };
 {
   id = Elixir;
+  id_string = "elixir";
   name = "Elixir";
   keys = [{|ex|}; {|elixir|}];
   exts = [{|.ex|}; {|.exs|}];
@@ -192,6 +203,7 @@ let list = [
 };
 {
   id = Go;
+  id_string = "go";
   name = "Go";
   keys = [{|go|}; {|golang|}];
   exts = [{|.go|}];
@@ -204,6 +216,7 @@ let list = [
 };
 {
   id = Hack;
+  id_string = "hack";
   name = "Hack";
   keys = [{|hack|}];
   exts = [{|.hack|}; {|.hck|}; {|.hh|}];
@@ -216,6 +229,7 @@ let list = [
 };
 {
   id = Html;
+  id_string = "html";
   name = "HTML";
   keys = [{|html|}];
   exts = [{|.htm|}; {|.html|}];
@@ -228,6 +242,7 @@ let list = [
 };
 {
   id = Java;
+  id_string = "java";
   name = "Java";
   keys = [{|java|}];
   exts = [{|.java|}];
@@ -240,6 +255,7 @@ let list = [
 };
 {
   id = Js;
+  id_string = "js";
   name = "JavaScript";
   keys = [{|js|}; {|javascript|}];
   exts = [{|.js|}; {|.jsx|}];
@@ -252,6 +268,7 @@ let list = [
 };
 {
   id = Json;
+  id_string = "json";
   name = "JSON";
   keys = [{|json|}];
   exts = [{|.json|}; {|.ipynb|}];
@@ -264,6 +281,7 @@ let list = [
 };
 {
   id = Jsonnet;
+  id_string = "jsonnet";
   name = "Jsonnet";
   keys = [{|jsonnet|}];
   exts = [{|.jsonnet|}; {|.libsonnet|}];
@@ -276,6 +294,7 @@ let list = [
 };
 {
   id = Julia;
+  id_string = "julia";
   name = "Julia";
   keys = [{|julia|}];
   exts = [{|.jl|}];
@@ -288,6 +307,7 @@ let list = [
 };
 {
   id = Kotlin;
+  id_string = "kotlin";
   name = "Kotlin";
   keys = [{|kt|}; {|kotlin|}];
   exts = [{|.kt|}; {|.kts|}; {|.ktm|}];
@@ -300,6 +320,7 @@ let list = [
 };
 {
   id = Lisp;
+  id_string = "lisp";
   name = "Lisp";
   keys = [{|lisp|}];
   exts = [{|.lisp|}; {|.cl|}; {|.el|}];
@@ -312,6 +333,7 @@ let list = [
 };
 {
   id = Lua;
+  id_string = "lua";
   name = "Lua";
   keys = [{|lua|}];
   exts = [{|.lua|}];
@@ -324,6 +346,7 @@ let list = [
 };
 {
   id = Ocaml;
+  id_string = "ocaml";
   name = "OCaml";
   keys = [{|ocaml|}];
   exts = [{|.ml|}; {|.mli|}];
@@ -336,6 +359,7 @@ let list = [
 };
 {
   id = Php;
+  id_string = "php";
   name = "PHP";
   keys = [{|php|}];
   exts = [{|.php|}; {|.tpl|}];
@@ -348,6 +372,7 @@ let list = [
 };
 {
   id = Python2;
+  id_string = "python2";
   name = "Python 2";
   keys = [{|python2|}];
   exts = [{|.py|}; {|.pyi|}];
@@ -360,6 +385,7 @@ let list = [
 };
 {
   id = Python3;
+  id_string = "python3";
   name = "Python 3";
   keys = [{|python3|}];
   exts = [{|.py|}; {|.pyi|}];
@@ -372,6 +398,7 @@ let list = [
 };
 {
   id = Python;
+  id_string = "python";
   name = "Python";
   keys = [{|py|}; {|python|}];
   exts = [{|.py|}; {|.pyi|}];
@@ -384,6 +411,7 @@ let list = [
 };
 {
   id = R;
+  id_string = "r";
   name = "R";
   keys = [{|r|}];
   exts = [{|.r|}; {|.R|}];
@@ -396,6 +424,7 @@ let list = [
 };
 {
   id = Ruby;
+  id_string = "ruby";
   name = "Ruby";
   keys = [{|ruby|}];
   exts = [{|.rb|}];
@@ -408,6 +437,7 @@ let list = [
 };
 {
   id = Rust;
+  id_string = "rust";
   name = "Rust";
   keys = [{|rust|}];
   exts = [{|.rs|}];
@@ -420,6 +450,7 @@ let list = [
 };
 {
   id = Scala;
+  id_string = "scala";
   name = "Scala";
   keys = [{|scala|}];
   exts = [{|.scala|}];
@@ -432,6 +463,7 @@ let list = [
 };
 {
   id = Scheme;
+  id_string = "scheme";
   name = "Scheme";
   keys = [{|scheme|}];
   exts = [{|.scm|}; {|.ss|}];
@@ -444,6 +476,7 @@ let list = [
 };
 {
   id = Solidity;
+  id_string = "solidity";
   name = "Solidity";
   keys = [{|solidity|}; {|sol|}];
   exts = [{|.sol|}];
@@ -456,6 +489,7 @@ let list = [
 };
 {
   id = Swift;
+  id_string = "swift";
   name = "Swift";
   keys = [{|swift|}];
   exts = [{|.swift|}];
@@ -468,6 +502,7 @@ let list = [
 };
 {
   id = Terraform;
+  id_string = "terraform";
   name = "Terraform";
   keys = [{|tf|}; {|hcl|}; {|terraform|}];
   exts = [{|.tf|}; {|.hcl|}];
@@ -480,6 +515,7 @@ let list = [
 };
 {
   id = Ts;
+  id_string = "ts";
   name = "TypeScript";
   keys = [{|ts|}; {|typescript|}];
   exts = [{|.ts|}; {|.tsx|}];
@@ -492,6 +528,7 @@ let list = [
 };
 {
   id = Vue;
+  id_string = "vue";
   name = "Vue";
   keys = [{|vue|}];
   exts = [{|.vue|}];
@@ -504,6 +541,7 @@ let list = [
 };
 {
   id = Xml;
+  id_string = "xml";
   name = "XML";
   keys = [{|xml|}];
   exts = [{|.xml|}];
@@ -516,6 +554,7 @@ let list = [
 };
 {
   id = Yaml;
+  id_string = "yaml";
   name = "YAML";
   keys = [{|yaml|}];
   exts = [{|.yml|}; {|.yaml|}];

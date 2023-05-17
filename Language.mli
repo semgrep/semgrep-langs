@@ -58,6 +58,7 @@ type maturity =
 *)
 type info = {
   id: t;
+  id_string: string;
   name: string;
   keys: string list;
   exts: string list;
