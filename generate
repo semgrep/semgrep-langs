@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# Generate YAML, JSON, and OCaml code describing the list of programming
+# Generate JSON and OCaml code describing the list of programming
 # languages supported by Semgrep.
 #
 # Edit this file to add or modify a language, then run 'make' to
@@ -13,6 +13,7 @@ from typing import List, Optional, TextIO
 import json
 import re
 
+
 # Level of support for a language in Semgrep. Refer to external documents
 # for their exact meaning e.g. https://semgrep.dev/docs/supported-languages/
 #
@@ -20,6 +21,7 @@ class Maturity(Enum):
     # "alpha" is now displayed as "experimental"
     ALPHA = "alpha"
     BETA = "beta"
+    # "develop" is not displayed in documentation
     DEVELOP = "develop"
     # GA means "general availability"
     GA = "ga"
@@ -27,41 +29,81 @@ class Maturity(Enum):
     def to_json(self):
         return self.value
 
+
 @dataclass
 class Language():
+    ##################################################################
+    # Properties of the language as understood by a user
+    ##################################################################
+
     # Machine-friendly unique language identifier
     id_: str
-    ### General properties of the language that make sense to users
-    #
+
     # Human-readable name
     name: str
+
     # Names by which the language or analyzer can be referred to in
     # Semgrep (rules, command line, etc.)
     keys: List[str]
     maturity: Maturity
-    # Property used by the default target selector for the language
-    exts: List[str]
+
+    # Comment for programmers who will read the generated code.
     comment: Optional[str] = None
+
     # Extension used when generating temporary or downloable files from
     # code snippets, hinting at what the file contains.
     example_ext: Optional[str] = None
-    # More properties used by the default target selector
+
+    ##################################################################
+    # Properties used to guess the language of a file.
+    ##################################################################
+    # This is useful for guessing purposes.
+    # Hoewver, these properties are too simplistic to fully determine
+    # target filtering as done by 'semgrep scan'.
+
+    # File extensions that are commonly used for the language, including
+    # the period.
+    # Several languages may share an extension.
+    # TODO: document what qualifies as an extension since don't seem to
+    # they have to start with a ".".
+    # TODO: document if they're case-sensitive.
+    exts: List[str] = field(default_factory=lambda: [""])
+
+    # File extensions that semgrep skips even if one of exts is a suffix,
+    # such as ".min.js".
     excluded_exts: List[str] = field(default_factory=list)
+
+    # If present, overrides exts when determining what language a
+    # file is, otherwise defaults to exts; reverse_exts must be a one-to-one
+    # mapping to languages.
+    # TODO: clarify, give examples, and explain in which context it's usable.
     reverse_exts: List[str] = field(default_factory=list)
+
+    # Programs that execute scripts written in this language. May be empty.
+    # TODO: this should not be defined here but where target
+    # filtering takes place because target filtering is complicated.
+    # Alternatively, explain your use case outside of 'semgrep scan'.
     shebangs: List[str] = field(default_factory=list)
+
     # Some "languages" are general-purpose text analyzers that aren't
     # programming languages or data formats. These include "regex" and
     # "aliengrep" which are not target languages. They do however have
     # their own pattern syntax and engine for matching patterns
     # against targets.
     is_target_language: bool = True
+
     # Mixed bag of tags used to select a subset of the languages.
-    # Please document them if you can.
     # Prefer boolean properties with a default value.
+    # Current tags include:
+    # - "is_proprietary" - for languages like Apex that not supported by
+    #   the open-source version of Semgrep.
+    # - "is_js" - for Javascript and Typescript
+    # - "is_python" - for Python, Python2, Python3
     tags: List[str] = field(default_factory=list)
 
     def to_json(self):
         if self.comment:
+            # Remove indentation from comment lines
             comment = re.sub("\n +", "\n", self.comment)
         else:
             comment = ""
@@ -165,6 +207,7 @@ LANGUAGES : List[Language] = [
         id_="dockerfile",
         name="Dockerfile",
         keys=["dockerfile", "docker"],
+        # Extensions don't need start with a "."?
         exts=[".dockerfile", ".Dockerfile", "Dockerfile"],
         example_ext=".dockerfile",
         maturity=Maturity.ALPHA,
