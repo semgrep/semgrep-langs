@@ -12,7 +12,6 @@ type t =
 | Dart
 | Dockerfile
 | Elixir
-| Generic
 | Go
 | Hack
 | Html
@@ -30,7 +29,6 @@ type t =
 | Python3
 | Python
 | R
-| Regex
 | Ruby
 | Rust
 | Scala
@@ -72,7 +70,6 @@ type info = {
 }
 
 let list = [
-
 {
   id = Apex;
   name = "Apex";
@@ -85,7 +82,6 @@ let list = [
   shebangs = [];
   tags = [{|is_proprietary|}];
 };
-
 {
   id = Bash;
   name = "Bash";
@@ -98,7 +94,6 @@ let list = [
   shebangs = [{|bash|}; {|sh|}];
   tags = [];
 };
-
 {
   id = C;
   name = "C";
@@ -111,7 +106,6 @@ let list = [
   shebangs = [];
   tags = [];
 };
-
 {
   id = Cairo;
   name = "Cairo";
@@ -124,7 +118,6 @@ let list = [
   shebangs = [];
   tags = [];
 };
-
 {
   id = Clojure;
   name = "Clojure";
@@ -137,7 +130,6 @@ let list = [
   shebangs = [];
   tags = [];
 };
-
 {
   id = Cpp;
   name = "C++";
@@ -150,7 +142,6 @@ let list = [
   shebangs = [];
   tags = [];
 };
-
 {
   id = Csharp;
   name = "C#";
@@ -163,7 +154,6 @@ let list = [
   shebangs = [];
   tags = [];
 };
-
 {
   id = Dart;
   name = "Dart";
@@ -176,7 +166,6 @@ let list = [
   shebangs = [];
   tags = [];
 };
-
 {
   id = Dockerfile;
   name = "Dockerfile";
@@ -189,7 +178,6 @@ let list = [
   shebangs = [];
   tags = [];
 };
-
 {
   id = Elixir;
   name = "Elixir";
@@ -202,20 +190,6 @@ let list = [
   shebangs = [];
   tags = [];
 };
-
-{
-  id = Generic;
-  name = "Generic";
-  keys = [{|generic|}];
-  exts = [{||}];
-  maturity = Alpha;
-  example_ext = Some {|.generic|};
-  excluded_exts = [];
-  reverse_exts = [];
-  shebangs = [];
-  tags = [];
-};
-
 {
   id = Go;
   name = "Go";
@@ -228,7 +202,6 @@ let list = [
   shebangs = [];
   tags = [];
 };
-
 {
   id = Hack;
   name = "Hack";
@@ -241,7 +214,6 @@ let list = [
   shebangs = [{|hhvm|}];
   tags = [];
 };
-
 {
   id = Html;
   name = "HTML";
@@ -254,7 +226,6 @@ let list = [
   shebangs = [];
   tags = [];
 };
-
 {
   id = Java;
   name = "Java";
@@ -267,7 +238,6 @@ let list = [
   shebangs = [];
   tags = [];
 };
-
 {
   id = Js;
   name = "JavaScript";
@@ -280,7 +250,6 @@ let list = [
   shebangs = [{|node|}; {|js|}; {|nodejs|}];
   tags = [{|is_js|}];
 };
-
 {
   id = Json;
   name = "JSON";
@@ -293,7 +262,6 @@ let list = [
   shebangs = [];
   tags = [];
 };
-
 {
   id = Jsonnet;
   name = "Jsonnet";
@@ -306,7 +274,6 @@ let list = [
   shebangs = [];
   tags = [];
 };
-
 {
   id = Julia;
   name = "Julia";
@@ -319,7 +286,6 @@ let list = [
   shebangs = [];
   tags = [];
 };
-
 {
   id = Kotlin;
   name = "Kotlin";
@@ -332,7 +298,6 @@ let list = [
   shebangs = [];
   tags = [];
 };
-
 {
   id = Lisp;
   name = "Lisp";
@@ -345,7 +310,6 @@ let list = [
   shebangs = [];
   tags = [];
 };
-
 {
   id = Lua;
   name = "Lua";
@@ -358,7 +322,6 @@ let list = [
   shebangs = [{|lua|}];
   tags = [];
 };
-
 {
   id = Ocaml;
   name = "OCaml";
@@ -371,7 +334,6 @@ let list = [
   shebangs = [{|ocaml|}; {|ocamlscript|}];
   tags = [];
 };
-
 {
   id = Php;
   name = "PHP";
@@ -384,7 +346,6 @@ let list = [
   shebangs = [{|php|}];
   tags = [];
 };
-
 {
   id = Python2;
   name = "Python 2";
@@ -397,7 +358,6 @@ let list = [
   shebangs = [{|python|}; {|python2|}];
   tags = [{|is_python|}];
 };
-
 {
   id = Python3;
   name = "Python 3";
@@ -410,7 +370,6 @@ let list = [
   shebangs = [{|python|}; {|python3|}];
   tags = [{|is_python|}];
 };
-
 {
   id = Python;
   name = "Python";
@@ -423,7 +382,6 @@ let list = [
   shebangs = [{|python|}; {|python2|}; {|python3|}];
   tags = [{|is_python|}];
 };
-
 {
   id = R;
   name = "R";
@@ -436,20 +394,6 @@ let list = [
   shebangs = [];
   tags = [];
 };
-
-{
-  id = Regex;
-  name = "regex";
-  keys = [{|regex|}; {|none|}];
-  exts = [{||}];
-  maturity = Develop;
-  example_ext = None;
-  excluded_exts = [];
-  reverse_exts = [];
-  shebangs = [];
-  tags = [];
-};
-
 {
   id = Ruby;
   name = "Ruby";
@@ -462,7 +406,6 @@ let list = [
   shebangs = [{|ruby|}];
   tags = [];
 };
-
 {
   id = Rust;
   name = "Rust";
@@ -475,7 +418,6 @@ let list = [
   shebangs = [{|run-cargo-script|}];
   tags = [];
 };
-
 {
   id = Scala;
   name = "Scala";
@@ -488,7 +430,6 @@ let list = [
   shebangs = [{|scala|}];
   tags = [];
 };
-
 {
   id = Scheme;
   name = "Scheme";
@@ -501,7 +442,6 @@ let list = [
   shebangs = [];
   tags = [];
 };
-
 {
   id = Solidity;
   name = "Solidity";
@@ -514,7 +454,6 @@ let list = [
   shebangs = [];
   tags = [];
 };
-
 {
   id = Swift;
   name = "Swift";
@@ -527,7 +466,6 @@ let list = [
   shebangs = [];
   tags = [];
 };
-
 {
   id = Terraform;
   name = "Terraform";
@@ -540,7 +478,6 @@ let list = [
   shebangs = [];
   tags = [];
 };
-
 {
   id = Ts;
   name = "TypeScript";
@@ -553,7 +490,6 @@ let list = [
   shebangs = [{|ts-node|}];
   tags = [{|is_js|}];
 };
-
 {
   id = Vue;
   name = "Vue";
@@ -566,7 +502,6 @@ let list = [
   shebangs = [];
   tags = [];
 };
-
 {
   id = Xml;
   name = "XML";
@@ -579,7 +514,6 @@ let list = [
   shebangs = [];
   tags = [];
 };
-
 {
   id = Yaml;
   name = "YAML";
@@ -592,5 +526,4 @@ let list = [
   shebangs = [];
   tags = [];
 };
-
 ]

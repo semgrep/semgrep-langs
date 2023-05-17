@@ -12,7 +12,6 @@ type t =
 | Dart
 | Dockerfile
 | Elixir
-| Generic
 | Go
 | Hack
 | Html
@@ -30,7 +29,6 @@ type t =
 | Python3
 | Python
 | R
-| Regex
 | Ruby
 | Rust
 | Scala
@@ -71,6 +69,9 @@ type info = {
   tags: string list;
 }
 
-(* List of all the programming languages for which Semgrep has dedicated
-   support. *)
+(*
+   List of all the programming languages for which Semgrep has dedicated
+   support. This list is sufficient to produce fast lookup tables implementing
+   to_string, of_string, etc.
+*)
 val list : info list
