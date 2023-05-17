@@ -70,7 +70,7 @@
     "id": "dockerfile",
     "name": "Dockerfile",
     "keys": ["dockerfile", "docker"],
-    "exts": [".dockerfile", ".Dockerfile", "Dockerfile"],
+    "exts": [".dockerfile", ".Dockerfile", "Dockerfile", "dockerfile"],
     "example_ext": ".dockerfile",
     "maturity": "alpha",
     "shebangs": []
