@@ -455,7 +455,7 @@
     ],
     "example_ext": ".py",
     "excluded_exts": [],
-    "reverse_exts": null,
+    "reverse_exts": [],
     "shebangs": [
       "python",
       "python2"
@@ -478,7 +478,7 @@
     ],
     "example_ext": ".py",
     "excluded_exts": [],
-    "reverse_exts": null,
+    "reverse_exts": [],
     "shebangs": [
       "python",
       "python3"

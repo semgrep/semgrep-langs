@@ -386,7 +386,7 @@ let list = [
   maturity = Develop;
   example_ext = Some {|.py|};
   excluded_exts = [];
-  reverse_exts = None;
+  reverse_exts = Some [];
   shebangs = [{|python|}; {|python2|}];
   tags = [{|is_python|}];
 };
@@ -399,7 +399,7 @@ let list = [
   maturity = Develop;
   example_ext = Some {|.py|};
   excluded_exts = [];
-  reverse_exts = None;
+  reverse_exts = Some [];
   shebangs = [{|python|}; {|python3|}];
   tags = [{|is_python|}];
 };
