@@ -43,12 +43,13 @@ type t =
 
 (*
    Maturity of the support for the programming language as shown to the
-   public.
+   public. The constructors are sorted by increasing maturity, allowing
+   meaningful sorting using the default 'compare'.
 *)
 type maturity =
+| Develop
 | Alpha
 | Beta
-| Develop
 | Ga
 
 (*
