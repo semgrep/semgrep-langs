@@ -123,7 +123,10 @@ class Language():
 
     # File extensions that are commonly used for the language, including
     # the period.
-    # Several languages may share an extension.
+    # Several languages may share an extension unlike for reverse_exts.
+    # TODO: find out and explain why "" is a valid extension and why
+    #       [""] works but [] doesn't. (I suspect it's an implementation
+    #       quirk that should be fixed)
     # TODO: document what qualifies as an extension since don't seem to
     # they have to start with a ".".
     # TODO: document if they're case-sensitive.
