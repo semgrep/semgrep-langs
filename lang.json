@@ -11,7 +11,7 @@
     ],
     "example_ext": null,
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [],
     "is_target_language": true,
     "tags": [
@@ -32,7 +32,7 @@
     ],
     "example_ext": ".sh",
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [
       "bash",
       "sh"
@@ -52,7 +52,7 @@
     ],
     "example_ext": null,
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [],
     "is_target_language": true,
     "tags": []
@@ -69,7 +69,7 @@
     ],
     "example_ext": null,
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [],
     "is_target_language": true,
     "tags": []
@@ -89,7 +89,7 @@
     ],
     "example_ext": null,
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [],
     "is_target_language": true,
     "tags": []
@@ -108,7 +108,7 @@
     ],
     "example_ext": ".cpp",
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [],
     "is_target_language": true,
     "tags": []
@@ -126,7 +126,7 @@
     ],
     "example_ext": null,
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [],
     "is_target_language": true,
     "tags": []
@@ -143,7 +143,7 @@
     ],
     "example_ext": null,
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [],
     "is_target_language": true,
     "tags": []
@@ -163,7 +163,7 @@
     ],
     "example_ext": ".dockerfile",
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [],
     "is_target_language": true,
     "tags": []
@@ -182,7 +182,7 @@
     ],
     "example_ext": null,
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [],
     "is_target_language": true,
     "tags": []
@@ -200,7 +200,7 @@
     ],
     "example_ext": null,
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [],
     "is_target_language": true,
     "tags": []
@@ -219,7 +219,7 @@
     ],
     "example_ext": ".hack",
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [
       "hhvm"
     ],
@@ -239,7 +239,7 @@
     ],
     "example_ext": ".html",
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [],
     "is_target_language": true,
     "tags": []
@@ -256,7 +256,7 @@
     ],
     "example_ext": null,
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [],
     "is_target_language": true,
     "tags": []
@@ -277,7 +277,7 @@
     "excluded_exts": [
       ".min.js"
     ],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [
       "node",
       "js",
@@ -301,7 +301,7 @@
     ],
     "example_ext": null,
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [],
     "is_target_language": true,
     "tags": []
@@ -319,7 +319,7 @@
     ],
     "example_ext": null,
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [],
     "is_target_language": true,
     "tags": []
@@ -336,7 +336,7 @@
     ],
     "example_ext": null,
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [],
     "is_target_language": true,
     "tags": []
@@ -356,7 +356,7 @@
     ],
     "example_ext": ".kt",
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [],
     "is_target_language": true,
     "tags": []
@@ -375,7 +375,7 @@
     ],
     "example_ext": null,
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [],
     "is_target_language": true,
     "tags": []
@@ -392,7 +392,7 @@
     ],
     "example_ext": null,
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [
       "lua"
     ],
@@ -412,7 +412,7 @@
     ],
     "example_ext": ".ml",
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [
       "ocaml",
       "ocamlscript"
@@ -433,7 +433,7 @@
     ],
     "example_ext": null,
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [
       "php"
     ],
@@ -453,7 +453,7 @@
     ],
     "example_ext": ".py",
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [
       "python",
       "python2"
@@ -476,7 +476,7 @@
     ],
     "example_ext": ".py",
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [
       "python",
       "python3"
@@ -500,7 +500,7 @@
     ],
     "example_ext": ".py",
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [
       "python",
       "python2",
@@ -524,7 +524,7 @@
     ],
     "example_ext": ".R",
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [],
     "is_target_language": true,
     "tags": []
@@ -541,7 +541,7 @@
     ],
     "example_ext": null,
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [
       "ruby"
     ],
@@ -560,7 +560,7 @@
     ],
     "example_ext": null,
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [
       "run-cargo-script"
     ],
@@ -579,7 +579,7 @@
     ],
     "example_ext": null,
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [
       "scala"
     ],
@@ -599,7 +599,7 @@
     ],
     "example_ext": null,
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [],
     "is_target_language": true,
     "tags": []
@@ -617,7 +617,7 @@
     ],
     "example_ext": null,
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [],
     "is_target_language": true,
     "tags": []
@@ -634,7 +634,7 @@
     ],
     "example_ext": null,
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [],
     "is_target_language": true,
     "tags": []
@@ -654,7 +654,7 @@
     ],
     "example_ext": null,
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [],
     "is_target_language": true,
     "tags": []
@@ -675,7 +675,7 @@
     "excluded_exts": [
       ".d.ts"
     ],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [
       "ts-node"
     ],
@@ -696,7 +696,7 @@
     ],
     "example_ext": null,
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [],
     "is_target_language": true,
     "tags": []
@@ -713,7 +713,7 @@
     ],
     "example_ext": ".xml",
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [],
     "is_target_language": true,
     "tags": []
@@ -731,7 +731,7 @@
     ],
     "example_ext": ".yaml",
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [],
     "is_target_language": true,
     "tags": []
@@ -749,7 +749,7 @@
     ],
     "example_ext": ".generic",
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [],
     "is_target_language": false,
     "tags": []
@@ -768,7 +768,7 @@
     ],
     "example_ext": null,
     "excluded_exts": [],
-    "reverse_exts": [],
+    "reverse_exts": null,
     "shebangs": [],
     "is_target_language": false,
     "tags": []

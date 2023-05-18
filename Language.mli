@@ -65,7 +65,7 @@ type info = {
   maturity: maturity;
   example_ext: string option;
   excluded_exts: string list;
-  reverse_exts: string list;
+  reverse_exts: string list option;
   shebangs: string list;
   tags: string list;
 }

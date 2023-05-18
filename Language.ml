@@ -65,7 +65,7 @@ type info = {
   maturity: maturity;
   example_ext: string option;
   excluded_exts: string list;
-  reverse_exts: string list;
+  reverse_exts: string list option;
   shebangs: string list;
   tags: string list;
 }
@@ -80,7 +80,7 @@ let list = [
   maturity = Develop;
   example_ext = None;
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [];
   tags = [{|is_proprietary|}];
 };
@@ -93,7 +93,7 @@ let list = [
   maturity = Alpha;
   example_ext = Some {|.sh|};
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [{|bash|}; {|sh|}];
   tags = [];
 };
@@ -106,7 +106,7 @@ let list = [
   maturity = Alpha;
   example_ext = None;
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [];
   tags = [];
 };
@@ -119,7 +119,7 @@ let list = [
   maturity = Develop;
   example_ext = None;
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [];
   tags = [];
 };
@@ -132,7 +132,7 @@ let list = [
   maturity = Alpha;
   example_ext = None;
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [];
   tags = [];
 };
@@ -145,7 +145,7 @@ let list = [
   maturity = Alpha;
   example_ext = Some {|.cpp|};
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [];
   tags = [];
 };
@@ -158,7 +158,7 @@ let list = [
   maturity = Ga;
   example_ext = None;
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [];
   tags = [];
 };
@@ -171,7 +171,7 @@ let list = [
   maturity = Develop;
   example_ext = None;
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [];
   tags = [];
 };
@@ -184,7 +184,7 @@ let list = [
   maturity = Alpha;
   example_ext = Some {|.dockerfile|};
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [];
   tags = [];
 };
@@ -197,7 +197,7 @@ let list = [
   maturity = Alpha;
   example_ext = None;
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [];
   tags = [];
 };
@@ -210,7 +210,7 @@ let list = [
   maturity = Ga;
   example_ext = None;
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [];
   tags = [];
 };
@@ -223,7 +223,7 @@ let list = [
   maturity = Develop;
   example_ext = Some {|.hack|};
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [{|hhvm|}];
   tags = [];
 };
@@ -236,7 +236,7 @@ let list = [
   maturity = Alpha;
   example_ext = Some {|.html|};
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [];
   tags = [];
 };
@@ -249,7 +249,7 @@ let list = [
   maturity = Ga;
   example_ext = None;
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [];
   tags = [];
 };
@@ -262,7 +262,7 @@ let list = [
   maturity = Ga;
   example_ext = Some {|.jsx|};
   excluded_exts = [{|.min.js|}];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [{|node|}; {|js|}; {|nodejs|}];
   tags = [{|is_js|}];
 };
@@ -275,7 +275,7 @@ let list = [
   maturity = Ga;
   example_ext = None;
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [];
   tags = [];
 };
@@ -288,7 +288,7 @@ let list = [
   maturity = Alpha;
   example_ext = None;
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [];
   tags = [];
 };
@@ -301,7 +301,7 @@ let list = [
   maturity = Alpha;
   example_ext = None;
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [];
   tags = [];
 };
@@ -314,7 +314,7 @@ let list = [
   maturity = Beta;
   example_ext = Some {|.kt|};
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [];
   tags = [];
 };
@@ -327,7 +327,7 @@ let list = [
   maturity = Alpha;
   example_ext = None;
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [];
   tags = [];
 };
@@ -340,7 +340,7 @@ let list = [
   maturity = Alpha;
   example_ext = None;
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [{|lua|}];
   tags = [];
 };
@@ -353,7 +353,7 @@ let list = [
   maturity = Alpha;
   example_ext = Some {|.ml|};
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [{|ocaml|}; {|ocamlscript|}];
   tags = [];
 };
@@ -366,7 +366,7 @@ let list = [
   maturity = Ga;
   example_ext = None;
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [{|php|}];
   tags = [];
 };
@@ -379,7 +379,7 @@ let list = [
   maturity = Develop;
   example_ext = Some {|.py|};
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [{|python|}; {|python2|}];
   tags = [{|is_python|}];
 };
@@ -392,7 +392,7 @@ let list = [
   maturity = Develop;
   example_ext = Some {|.py|};
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [{|python|}; {|python3|}];
   tags = [{|is_python|}];
 };
@@ -405,7 +405,7 @@ let list = [
   maturity = Ga;
   example_ext = Some {|.py|};
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [{|python|}; {|python2|}; {|python3|}];
   tags = [{|is_python|}];
 };
@@ -418,7 +418,7 @@ let list = [
   maturity = Alpha;
   example_ext = Some {|.R|};
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [];
   tags = [];
 };
@@ -431,7 +431,7 @@ let list = [
   maturity = Ga;
   example_ext = None;
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [{|ruby|}];
   tags = [];
 };
@@ -444,7 +444,7 @@ let list = [
   maturity = Alpha;
   example_ext = None;
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [{|run-cargo-script|}];
   tags = [];
 };
@@ -457,7 +457,7 @@ let list = [
   maturity = Ga;
   example_ext = None;
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [{|scala|}];
   tags = [];
 };
@@ -470,7 +470,7 @@ let list = [
   maturity = Alpha;
   example_ext = None;
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [];
   tags = [];
 };
@@ -483,7 +483,7 @@ let list = [
   maturity = Alpha;
   example_ext = None;
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [];
   tags = [];
 };
@@ -496,7 +496,7 @@ let list = [
   maturity = Alpha;
   example_ext = None;
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [];
   tags = [];
 };
@@ -509,7 +509,7 @@ let list = [
   maturity = Ga;
   example_ext = None;
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [];
   tags = [];
 };
@@ -522,7 +522,7 @@ let list = [
   maturity = Ga;
   example_ext = Some {|.tsx|};
   excluded_exts = [{|.d.ts|}];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [{|ts-node|}];
   tags = [{|is_js|}];
 };
@@ -535,7 +535,7 @@ let list = [
   maturity = Develop;
   example_ext = None;
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [];
   tags = [];
 };
@@ -548,7 +548,7 @@ let list = [
   maturity = Alpha;
   example_ext = Some {|.xml|};
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [];
   tags = [];
 };
@@ -561,7 +561,7 @@ let list = [
   maturity = Alpha;
   example_ext = Some {|.yaml|};
   excluded_exts = [];
-  reverse_exts = [];
+  reverse_exts = None;
   shebangs = [];
   tags = [];
 };

@@ -77,7 +77,7 @@ class Language():
     # file is, otherwise defaults to exts; reverse_exts must be a one-to-one
     # mapping to languages.
     # TODO: clarify, give examples, and explain in which context it's usable.
-    reverse_exts: List[str] = field(default_factory=list)
+    reverse_exts: Optional[List[str]] = None
 
     # Programs that execute scripts written in this language. May be empty.
     # TODO: this should not be defined here but where target
@@ -352,7 +352,7 @@ LANGUAGES : List[Language] = [
         name="Python 2",
         keys=["python2"],
         exts=[".py", ".pyi"],
-        reverse_exts=[],
+        reverse_exts=None,
         example_ext=".py",
         maturity=Maturity.DEVELOP,
         shebangs=["python", "python2"],
@@ -364,7 +364,7 @@ LANGUAGES : List[Language] = [
         name="Python 3",
         keys=["python3"],
         exts=[".py", ".pyi"],
-        reverse_exts=[],
+        reverse_exts=None,
         example_ext=".py",
         maturity=Maturity.DEVELOP,
         shebangs=["python", "python3"],
@@ -529,7 +529,7 @@ LANGUAGES : List[Language] = [
         is_target_language=False,
         keys=["regex", "none"],
         exts=[""],
-        reverse_exts=[],
+        reverse_exts=None,
         maturity=Maturity.DEVELOP
     ),
 ]
@@ -569,7 +569,7 @@ type info = {
   maturity: maturity;
   example_ext: string option;
   excluded_exts: string list;
-  reverse_exts: string list;
+  reverse_exts: string list option;
   shebangs: string list;
   tags: string list;
 }
@@ -592,6 +592,15 @@ def ocaml_string_option(x: Optional[str]) -> str:
 def ocaml_string_list(xs: List[str]) -> str:
     quoted = [ ocaml_string(x) for x in xs ]
     return f"""[{"; ".join(quoted)}]"""
+
+
+# There should be a way to get this by combining ocaml_string, ocaml_list,
+# and ocaml_option but it's just too much for me right now.
+def ocaml_string_list_option(x: Optional[List[str]]) -> str:
+    if x is None:
+        return "None"
+    else:
+        return f"Some {ocaml_string_list(x)}"
 
 
 # Used by semgrep-core and osemgrep
@@ -632,7 +641,7 @@ let list = [
   maturity = {x.maturity.value.capitalize()};
   example_ext = {ocaml_string_option(x.example_ext)};
   excluded_exts = {ocaml_string_list(x.excluded_exts)};
-  reverse_exts = {ocaml_string_list(x.reverse_exts)};
+  reverse_exts = {ocaml_string_list_option(x.reverse_exts)};
   shebangs = {ocaml_string_list(x.shebangs)};
   tags = {ocaml_string_list(x.tags)};
 }};
