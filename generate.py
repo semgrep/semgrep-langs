@@ -6,6 +6,66 @@
 # Edit this file to add or modify a language, then run 'make' to
 # update the files used by our various git projects.
 #
+###########################################################################
+# Design notes:
+#
+# Initially, I wanted to use ATD because it defines a type (better than
+# the readme). I tried that 6 months ago or so but didn't continue the
+# effort because of the complexity.
+#
+# We need the following:
+#
+# 1. Generate type definitions for OCaml, Python, etc. that correspond to
+#    each language.
+# 2. We need to take the list of languages (data) and turn
+#    it into code that OCaml, Python, TypeScript, etc. can use.
+#
+# Step 1 can be done with ATD well as we've done before in other
+# contexts. Step 2 is done in Python (pysemgrep) by loading a JSON
+# file at runtime. For OCaml (semgrep-core), it was done by an extra
+# build step that takes the JSON data and turns it into OCaml (using
+# jinja). I wanted to eliminate the jinja build step which is weird to
+# have in an OCaml project (extra setup, needs extra expertise). Dune
+# also buries the generated OCaml files (same problem with atdgen
+# btw), so we end up without easy access to the contents of Lang.mli.
+#
+# To make the list of languages more accessible, the only approach I
+# could see is to generate the OCaml files ahead of time, in a step
+# outside of the dune build. This could be done either in the
+# semgrep-langs repo or in the semgrep repo. Either would be fine as
+# far as OCaml is concerned.
+#
+# However, we also need to produce a lang.json or equivalent Python and
+# TypeScript code that contains the list of languages. Doing this with
+# ATD involves (a) generating the target code in OCaml, Python, and
+# TypeScript, and (b) running a program that uses that code and defines
+# the list of languages. That program could be written in OCaml but it
+# requires an opam setup. It could be written in Python, which is more
+# likely to be installed on the user's machine. That's the solution I
+# went for, thinking nobody would complain that we depend on a bunch of
+# Python packages (in fact, the dependencies are rather lightweight and
+# don't involve 3rd-party packages like atdgen-runtime for OCaml).
+#
+# Now, given the solution of writing a Python program to generate
+# lang.json, we might as well define the type definitions (which are
+# about 15 lines of code) in Python/mypy directly rather than ATD and
+# duplicate it manually for OCaml. This is what's being done right
+# now. It avoids the atdpy step and introduces a tiny bit of duplication
+# of type definitions (somewhere, we print() an OCaml type definition
+# similar to the mypy type definition of a language). Writing lang.json
+# is the other part of the code where atdpy-generated Python code would
+# have saved a bit of boilerplate. atdgen doesn't provide a way to write
+# data in OCaml format like we wanted without going through JSON, so
+# that's not an effort we could avoid.
+#
+# In conclusion, having a single generate script that only depends on a
+# vanilla installation of Python 3 is simpler than ATD to set up for
+# everyone who will have to touch this. ATD wouldn't make it easier to
+# generate the list of languages in OCaml syntax, and Python is fine for
+# this task. If the atd suite provided a direct way to generate data for
+# all the target languages instead of going through JSON, we would
+# certainly use it.
+
 
 from dataclasses import dataclass, field
 from enum import Enum
