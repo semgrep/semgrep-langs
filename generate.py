@@ -77,12 +77,15 @@ import re
 # Level of support for a language in Semgrep. Refer to external documents
 # for their exact meaning e.g. https://semgrep.dev/docs/supported-languages/
 #
+# Constructors are sorted by increasing maturity to facilitate meaningful
+# sorting.
+#
 class Maturity(Enum):
+    # "develop" is not displayed in documentation
+    DEVELOP = "develop"
     # "alpha" is now displayed as "experimental"
     ALPHA = "alpha"
     BETA = "beta"
-    # "develop" is not displayed in documentation
-    DEVELOP = "develop"
     # GA means "general availability"
     GA = "ga"
 
@@ -610,12 +613,13 @@ type t =
     out.write("""
 (*
    Maturity of the support for the programming language as shown to the
-   public.
+   public. The constructors are sorted by increasing maturity, allowing
+   meaningful sorting using the default 'compare'.
 *)
 type maturity =
+| Develop
 | Alpha
 | Beta
-| Develop
 | Ga
 
 (*
