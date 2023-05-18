@@ -176,12 +176,18 @@ let list = [
   shebangs = [];
   tags = [];
 };
+(*
+  'Dockerfile' is the only standard name for Dockerfiles.
+  The extension '.Dockerfile' is cited in the official documentation as
+  a popular extension. Whatever naming scheme is used in practice and is
+  not ambiguous is welcome here.
+*)
 {
   id = Dockerfile;
   id_string = "dockerfile";
   name = "Dockerfile";
   keys = [{|dockerfile|}; {|docker|}];
-  exts = [{|.dockerfile|}; {|.Dockerfile|}; {|Dockerfile|}];
+  exts = [{|.dockerfile|}; {|.Dockerfile|}; {|Dockerfile|}; {|dockerfile|}];
   maturity = Alpha;
   example_ext = Some {|.dockerfile|};
   excluded_exts = [];

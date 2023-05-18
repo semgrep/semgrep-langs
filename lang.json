@@ -149,6 +149,7 @@
     "tags": []
   },
   {
+    "comment": "'Dockerfile' is the only standard name for Dockerfiles.\nThe extension '.Dockerfile' is cited in the official documentation as\na popular extension. Whatever naming scheme is used in practice and is\nnot ambiguous is welcome here.\n",
     "id": "dockerfile",
     "name": "Dockerfile",
     "keys": [
@@ -159,7 +160,8 @@
     "exts": [
       ".dockerfile",
       ".Dockerfile",
-      "Dockerfile"
+      "Dockerfile",
+      "dockerfile"
     ],
     "example_ext": ".dockerfile",
     "excluded_exts": [],
