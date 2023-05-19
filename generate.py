@@ -422,6 +422,7 @@ not ambiguous is welcome here.
         name="Python 2",
         keys=["python2"],
         exts=[".py", ".pyi"],
+        # need to avoid conflict with Python3 and Python:
         reverse_exts=[],
         example_ext=".py",
         maturity=Maturity.DEVELOP,
@@ -434,6 +435,7 @@ not ambiguous is welcome here.
         name="Python 3",
         keys=["python3"],
         exts=[".py", ".pyi"],
+        # need to avoid conflict with Python2 and Python:
         reverse_exts=[],
         example_ext=".py",
         maturity=Maturity.DEVELOP,
@@ -599,7 +601,8 @@ not ambiguous is welcome here.
         is_target_language=False,
         keys=["regex", "none"],
         exts=[""],
-        reverse_exts=None,
+        # need to avoid conflict with "generic":
+        reverse_exts=[],
         maturity=Maturity.DEVELOP
     ),
 ]
