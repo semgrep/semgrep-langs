@@ -581,7 +581,7 @@ not ambiguous is welcome here.
         id_="generic",
         name="Generic",
         is_target_language=False,
-        keys=["generic"],
+        keys=["generic", "spacegrep"],
         # Since "generic" is not a target selector, it doesn't
         # make sense to specify this 'exts' field. Specifying an empty
         # extension shouldn't be needed. We should remove it when once we're
@@ -589,6 +589,16 @@ not ambiguous is welcome here.
         exts=[""],
         example_ext=".generic",
         maturity=Maturity.ALPHA,
+        shebangs=[]
+    ),
+    Language(
+        comment="""Alternative engine for generic files""",
+        id_="aliengrep",
+        name="Aliengrep",
+        is_target_language=False,
+        keys=["aliengrep"],
+        exts=[""],
+        maturity=Maturity.DEVELOP,
         shebangs=[]
     ),
     Language(
