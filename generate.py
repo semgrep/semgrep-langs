@@ -598,6 +598,8 @@ not ambiguous is welcome here.
         is_target_language=False,
         keys=["aliengrep"],
         exts=[""],
+        # need to avoid conflict with "generic":
+        reverse_exts=[],
         maturity=Maturity.DEVELOP,
         shebangs=[]
     ),
