@@ -743,7 +743,8 @@
     "id": "generic",
     "name": "Generic",
     "keys": [
-      "generic"
+      "generic",
+      "spacegrep"
     ],
     "maturity": "alpha",
     "exts": [
@@ -752,6 +753,24 @@
     "example_ext": ".generic",
     "excluded_exts": [],
     "reverse_exts": null,
+    "shebangs": [],
+    "is_target_language": false,
+    "tags": []
+  },
+  {
+    "comment": "Alternative engine for generic files",
+    "id": "aliengrep",
+    "name": "Aliengrep",
+    "keys": [
+      "aliengrep"
+    ],
+    "maturity": "develop",
+    "exts": [
+      ""
+    ],
+    "example_ext": null,
+    "excluded_exts": [],
+    "reverse_exts": [],
     "shebangs": [],
     "is_target_language": false,
     "tags": []
